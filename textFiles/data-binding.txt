@@ -1,0 +1,17 @@
+---------------------- ANGULAR DATA BINDING --------------
+
+1. data binding mean how the data in the component and the template view shared.
+
+2. there are two ways of the DB
+   1. one way --> each other doesnot know the changes in the data. in defaul ng data binding are one way. 
+   2. two way --> each other knows the changes in the data
+
+3. we can use {{variable-name}} --> to show the data in template view or we can bind the data 
+   by prop binding. <my-component [elementDomProp]="variable-name". {{}} --> string interpolation
+
+4. the above method we bind the data using our component. we can bind data in view we use event binding.
+
+5. In two way binding data changes reflect in both side. in ng that is acheived by ngModule. 
+   if we use directive in ng we need to import , import formsModule from ng.
+
+6. for two data binding [(ngModel)] = "variabble-name"

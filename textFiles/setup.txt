@@ -1,0 +1,25 @@
+---------------------- ANGULAR SETUP ------------
+
+1. init angular project npm init @angular project-name
+
+2. it will create basic structure of angular
+
+3. npm i -g @angular/cli for ng cli. it will give you some extra dx for angular
+
+4. ng new project-name --to create angular project
+
+------------------ ANGULAR PROJECT FOLDER STRUCTURE -------------
+
+1. .angular --> contains cache file for angular perfomance improvement
+
+2. anguar.json --> contains angular configurations
+
+3. tsconfig.spec.json --> used for the testing of the application
+
+4. /app --> contains all components and related file for angular
+
+5. app.module.ts --> contains all component import and control over the other components
+
+6. index.html --> angular appp run <app-root></app-root> element.
+
+7. main.ts --> main file for angular contain app.config or app.module file and it run that file.

@@ -1,0 +1,5 @@
+---------------- PROPERTY BINDING ----------
+
+1.  which mean assinging the data or value to the html dom element property.
+
+2.  <button [disabled]="{{true}}"></button>

@@ -1,0 +1,27 @@
+-------------------- DIRECTIVES -----------
+
+1. directives helps to change the behavior,apperance and layout.
+
+2. there are three directives
+  1. component --> componentare directives too.
+  2. structural --> structural directives start with *ngFor , it constructs the structure of the elem. 
+  3. attribute --> are use to change the behavior and apperance.
+
+3. cannot assign an multiple directives on single element.
+
+Structural Directive 
+
+ 1. *ngFor --> used to loop  [index,odd,even,first,last]
+
+ 2. *ngSwitch --> switch case for the template. [ngSwitch]="variable" for root. *ngSwitchCase="data"
+
+ 3. *ngIf --> used for an conditional rendering. like if condition. ngIf="boolean;" 
+    we can use else also <ng-template #name>content</ng-template> ngIf="boolean; else elseBlock";
+    then is used to shows the content in ng-template if true ngIf="boolean; then thenBlock;else elseBlock";
+
+
+attribute Directives
+
+1. [ngClass] --> used to add class in ng [ngClass]=['class-name'] || {'class-name':boolean}
+
+2. [ngStyle] --> used to apply the style using ng. [ngStyle]={"prop":teranary operator}

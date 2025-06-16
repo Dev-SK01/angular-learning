@@ -1,0 +1,47 @@
+----------------- ANGULAR COMPONENT -------------------
+
+1. component is like and seperate html like file in angular.
+
+2. conponent has Data , HTML-template , Logic in ng
+
+3. component is help us to creat reusable component
+
+4. in ng it always contains app as an root component for ng
+
+5. we can set our own component for root component in ng
+
+6. dom changes in ng how ng updates the dom based on the logic. ng perfomance based on ng dom update
+
+7. ng update the dom changes faster,and how precise we seperate our component it will boost ng perfomance.
+
+
+-----------------  HOW COMPONENTS WORKS ? -------------
+
+1. app.ts --> contains the logic for the component.
+
+2. app.css , app.html ---> contains css and html template file for the logic
+
+3. app.spec.ts --> used while testing the component.
+
+4. app.config.ts --> root filefor the app component. and routes.ts contains app routes.
+   in newest version app.module.ts not used , it uses imoprts of the component decorator.
+
+5. component decorator handles the component related works , selector holds the where the component 
+   should render. templateUrl , styleUrls , imports contains html cnd css file path. webpack inject the 
+   essential js file or ng nd it start the ng server.
+
+----------------------- HOW TO CREATE COMPONENTS ------------------------
+
+1. In ng there are two ways to create components 
+     1. CLI easy way
+     2. Mannual Way likely hard way
+
+2. Mannual Way to create an component
+  1. first create an component decorator and related file and component class and export component class.
+  2. selector name followed by root component name eg:app-my-component
+  3. in ng uses PascalCase. component class name MyTestcomponent.
+  4. then we need to import the component in root component decorator imports prop.
+  5. bootstrap prop tells the which component should i load first.
+
+1. CLI Way
+  1. ng generate component component-name || ng g c component-name

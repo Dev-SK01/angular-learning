@@ -1,0 +1,51 @@
+<h1>{{title}}</h1>
+<h1 [innerText] = "oneWay"></h1>
+<h1>{{twoWay}}</h1>
+<input type="text" [(ngModel)]= "twoWay">
+<button [disabled]="isDisabled">Prop Binding</button>
+<p>{{count}}</p>
+<button on-click="clickMe();">Event Binding</button>
+<p>Event Payload</p> <input type="text" (input) = "handleEventPayload($event);oneWay= $any($event.target).value">
+<p>{{eventPayload}}</p>
+
+<div>
+    <h1>Structural Directives</h1>
+    <div>
+        <p>NG FOR</p>
+        <p *ngFor = "let movie of movies; let idx=index; let f=first;let o=odd;">
+            {{idx}} {{movie}} {{f}} {{o}}
+        </p>
+    </div>
+    <div [ngSwitch]="ngSwitch">
+        <p>NG SWITCH</p>
+        <p *ngSwitchCase= "1">Switch case</p>
+    </div>
+
+    <div>
+        <p> NG IF </p>
+        <label for="h">CheckBox <input type="checkbox" [(ngModel)]="ngIf"></label>
+        <p *ngIf="ngIf; then thenBlock; else elseBlock;"></p>
+    </div>
+</div>
+
+<div>
+    <h1>Attribute Directive</h1>
+    <div>
+        <p>NG STYLE</p>
+        <label for="r">color : <input type="text" [(ngModel)]="color"></label>
+       <div [ngStyle]="{'color':color,}">{{color}}</div>
+    </div>
+
+    <div [ngClass]="['bg-red']">
+        <p>NG CLASS</p>
+        <p>NG Class || Attribute Directive</p>
+    </div>
+</div>
+
+<!-- ng templates -->
+<ng-template #thenBlock>
+    <span>Checked</span>
+</ng-template>
+ <ng-template #elseBlock>
+        <p>Un-Checked</p>
+</ng-template>

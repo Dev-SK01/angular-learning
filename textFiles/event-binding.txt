@@ -1,0 +1,15 @@
+-------------- EVENT BINDING --------
+
+1. Binding an dom lement event. it facilitates interaction between template and component.
+
+2. to tell angular to listen an event  (event-name)="function to call".
+
+3. we can use on-click attribute to bind the event.
+
+4. in event binding we can write an js code. on-click = "clickMe(); console.log("hello);"
+
+5. $event property has the payload of the event. function($event); function(event)
+
+6. input event listen when the text entered.
+
+7. we can set the type in "$any($event.target).value";

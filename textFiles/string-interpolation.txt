@@ -1,0 +1,7 @@
+---------------- STRING INTERPOlATION ----------------
+
+1. string interpolation in ng is an like js expression.
+
+2. like react jsx. it executes and provide the result.
+
+3. we can use string interpolation in elememt property , function style.color="{{color}}"
