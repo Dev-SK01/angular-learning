@@ -25,3 +25,14 @@ attribute Directives
 1. [ngClass] --> used to add class in ng [ngClass]=['class-name'] || {'class-name':boolean}
 
 2. [ngStyle] --> used to apply the style using ng. [ngStyle]={"prop":teranary operator}
+
+
+Custom Directive
+
+1. in ng we can create an Custom directive for our own purpose.
+
+2. ng g d directiveName --> it will create an custom directive for use
+
+3. @input decorator important for custom directive. it gives the value of directive used element.
+
+4. ElementRef for ng element , elem.nativeElement --> has the actual dom props.

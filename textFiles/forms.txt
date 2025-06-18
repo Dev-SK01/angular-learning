@@ -1,0 +1,61 @@
+--------------- Angular Forms --------
+
+1. in ng form we can get dat from form,track changes,form validation
+
+2. there are tow ways to implement form in ng 
+   1. Template Driven --> form operation handled in Template
+   2. Reactive Forms
+
+Template Driven :
+
+1. when we create an html form it act an normal form if we add ngFrom directive it changed to 
+   angular template form.
+
+2. when ever ng see form tag it see as an ngFrom. ngform give an form group instacnce for whole form
+   and it give form control instance for each form element.
+
+3. we can get the form group data by declaring variable in form tag #formVar="ngForm"
+
+4. for tell the form element add ngModule attribute in all form elements.
+
+5. ngModelGroup --> tell ngForm ther is an another form group.
+
+6. form.value --> gives  the js object.
+
+Reactive Forms :
+
+1. in reactive form we need to creat form group and form control objects.
+
+2. we need to import ReactiveFormModule.
+
+3. formName = new FormGroup({
+    firstName:new FormControl("value",[Validator.required])
+});
+
+4. in html form <form formGroup="formName">
+
+5. for for element <input type="text" formControlName="firstName">
+
+6. for nested for to add form group add formGroupName="formGroupVariable"
+
+7. in reactive form we can easily put default value --> new FormControl({value:"value"});
+
+
+--------------------------- FORM VALIDATION ---------------
+
+1.in default when we use form module ng add add novalidate in html form. it prevents default html validation.
+
+2. use use native html validation we can use ngNativeValidate attribute in form. if html validation work
+   ng vlidator can't work.
+
+3. formName.valid return boolean if form satifies all validation. formName.touched --> if field is touched.
+   formName.dirty --> if value entered. formName.errors ---> has form validation errors.
+
+4. here we add form vaildation as html attribute like required, min,max,pattern
+
+5. for reactive form we need to pass [validators] in FormControl instance. 
+   FormControl('value' [Validator.required,validator.min]);
+   we can use get method for get the element form control. 
+   formName.get(elementProp) --> return the elementProp form control object.
+
+6. we can acess the object by formName.controls.props.props

@@ -1,0 +1,11 @@
+------------------- PIPES IN NG ------------
+
+1. pipes are the used to change the data as per our desire.
+
+2. eg. data pipe --> we have data str as ISO format , data pipe heps us to change the op of the data str
+
+3. lower,uppescase,slice pipes.
+
+4. {{variable | pipe:'arg1':'arg2'}} -->syntax to use pipe.
+
+5. async pipe

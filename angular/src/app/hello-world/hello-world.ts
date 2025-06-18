@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
 import { FormsModule} from '@angular/forms';
-import { NgFor,NgSwitch,NgSwitchCase,NgIf,NgClass,NgStyle } from '@angular/common';
+import { CommonModule } from '@angular/common';
+import { HighlightDirective } from '../highlight';
+import { CarForm } from '../car-form/car-form';
+import {MyHttpClient} from '../http-client/http-client';
+
 
 @Component({
   selector: 'app-hello-world',
-  imports: [FormsModule,NgFor,NgSwitch,NgSwitchCase,NgIf,NgClass,NgStyle],
+  imports: [FormsModule,CommonModule,CarForm,MyHttpClient],
   templateUrl: './hello-world.html',
-  styleUrl: './hello-world.css'
+  styleUrl: './hello-world.css',
+  standalone:true,
 })
 
 export class HelloWorld {
@@ -20,6 +25,10 @@ export class HelloWorld {
     ngSwitch:number = 1;
     ngIf:boolean = true;
     color:string = 'blue';
+    pipeDate = new Date();
+    pipeMessage = "hello i'm an message for pipe";
+
+    
     clickMe(){
       this.count++;
       console.log(this.count)

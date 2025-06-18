@@ -1,0 +1,11 @@
+--------------------- SIGNALS IN NG -----------
+
+1. Signals are like react use state, it will help us to manage the states.
+
+2. signal() --> used to create an signal.
+
+3. computed(variables() + 1) --> helps to computed the state changes using the signal state.
+
+4. variable.set() --> set the new state. we need to call signal variable as variable()
+
+5. it reduce the code of RxJs and observables.

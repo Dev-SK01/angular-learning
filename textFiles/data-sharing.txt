@@ -1,0 +1,15 @@
+---------------- DATA SHARING BETWEEN COMPOENENT ------------
+
+1. we can  share the data parent to child or child to parent
+
+2. we use Input(variable name) to get an input from parent. P -> C
+
+3. <child [variable-name]='data'><child> --> here we share the data to child.
+
+4. Output() C -> P, this decorator has event emitter to tell the parent data changed
+
+5. @Output eventName:EventEmitter<type of the data> = new emitter; 
+
+6. this.eventName.emit(this.data) --> emit the data to parent.
+
+7. <parent (eventName) = "eventtCallback($event)"

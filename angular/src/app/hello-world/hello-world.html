@@ -1,9 +1,13 @@
 <h1>{{title}}</h1>
+
 <h1 [innerText] = "oneWay"></h1>
+
 <h1>{{twoWay}}</h1>
 <input type="text" [(ngModel)]= "twoWay">
+
 <button [disabled]="isDisabled">Prop Binding</button>
 <p>{{count}}</p>
+
 <button on-click="clickMe();">Event Binding</button>
 <p>Event Payload</p> <input type="text" (input) = "handleEventPayload($event);oneWay= $any($event.target).value">
 <p>{{eventPayload}}</p>
@@ -40,6 +44,42 @@
         <p>NG CLASS</p>
         <p>NG Class || Attribute Directive</p>
     </div>
+</div>
+
+<div>
+    <h1>custom directive</h1>
+    <p>this element uses custom directive</p>
+</div>
+
+<div>
+   <h1>Angular Pipes</h1>
+
+   <div>
+    <p>Date Pipe</p>
+    <p>Unformated Date : {{pipeDate}}</p>
+    <p>formated Date : {{pipeDate | date}}</p>
+    <p>Medium Date : {{pipeDate | date:'medium'}}</p>
+   </div>
+  
+   <div>
+    <p>Case Pipe</p>
+     <p>UpperCase : {{pipeMessage | uppercase}}</p>
+     <p>LowerCase : {{pipeMessage | lowercase}}</p>
+     <p>Slice: {{pipeMessage | slice:0:6}}</p>
+    <p>Currency : {{25 | currency:'INR'}}</p>
+   </div>
+</div>
+
+<div>
+    <h1>Data Sharing</h1>
+    <!-- parent form -->
+    <app-car-form></app-car-form>
+</div>
+
+<div>
+    <h1>Http Client</h1>
+    <!-- http client component -->
+    <app-http-client></app-http-client>
 </div>
 
 <!-- ng templates -->

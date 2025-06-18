@@ -1,0 +1,19 @@
+----------------------- ANGULAR HTTP CLIENT ---------------
+
+1 if the browser sends the request to server it reloadds the page. if the page reloadsng forget everything
+  and load as a new page.
+
+2. httpClient helps us to send request to the server without help of browser. it will help to 
+   control the reload.
+
+3. import httpClient module from /common/http. 
+   if you use below 20V import modle and import class and use it.
+   import and use providerHttpClient in config 
+
+4. declare http object in constructor. it has all function for api request. 
+
+5. http.get() --> returns an observables. 
+   we can change the response data type by http.get<type>('url').
+
+6. observalbes means , like an async promise for an angular. it has lots of methods. here we use subscribe()
+   this has callback function , when response received from server. subscribe callback will executed

@@ -1,0 +1,21 @@
+------------------- COMPONENTLIFE CYCLE ----------
+
+1. ng compont has lifecycle , when they create, propupdate,viewchange,destroy. ng give an space to 
+   do something on component lifecycle.
+
+2. ngOnchanges, ngOnInit, ngDoCheck, ngAfterContentInit, ngAfterViewInit, ngAfterViewChecked, ngOnDestroy.
+
+3. these are like hooks
+
+4. ngOnchanges() --> when ever component prop changes it will call. we need tom import type.
+   our component implements that onChange type. then we can get ngOnchange (change:simpleChanges):void
+   {
+    change[inputDecoratorVariable].firstChange,currentValue,previousValue
+   }
+   it cannot be ale to find an changes of array,obj data types
+
+5. ngOnInit() --> its exected when the component
+
+6. ngDoCheck() --> it will called whenever keyboard,mouse events happens
+
+7. ngOndestroy --> it will executed when the compoent destroys.

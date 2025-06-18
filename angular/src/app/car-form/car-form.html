@@ -1,0 +1,42 @@
+<h3>Car Form Parent</h3>
+<div action="">
+    <label for="car">Enter Car <input type="text" [(ngModel)]="carName"></label>
+    <button (click)="addCar()">Add Car</button>
+</div>
+
+<!-- child car List -->
+<app-list-car [parentData]="cars"></app-list-car>
+
+<div>
+    <h1>Angular Forms</h1>
+    <div>
+        <h3>Template Driven</h3>
+        <form #form="ngForm" (submit)="onSubmit(form)" name="ngForm">
+            <label for="name">First Name:
+                <input type="text" placeholder="Enter Name" name="firstname" #firstname="ngModel" ngModel required minlength="10">
+                <!-- form validation -->
+                <span *ngIf="!firstname.valid && (!firstname.touched || !firstname.dirty)">
+                    <span *ngIf="firstname.errors?.['required']">First Name Required</span>
+                    <span *ngIf="firstname.errors?.['minlength']">Should be 10 chars</span>
+                </span>
+            </label>
+            <br>
+            <label for="ln">Last Name:<input type="text" placeholder="Enter Name" name="lastname" ngModel></label><br>
+            <label for="gen">Gender
+                <input type="radio" placeholder="Enter Name" name="gender" value = "male" ngModel>Male
+                <input type="radio" placeholder="Enter Name" name="gender" value="female" ngModel>Female
+            </label><br>
+            <select name="counrty" ngModel name="country">
+                 <option value="">Select</option>
+                 <option value="india">india</option>
+
+            </select>
+
+            <!-- <div ngFormGroup="another">
+                 <label for="g">Another Form <input type="text" placeholder="another form" name="another"></label>
+            </div> -->
+
+            <button type="submit">Sumbit</button><br>
+        </form>
+    </div>
+</div>
