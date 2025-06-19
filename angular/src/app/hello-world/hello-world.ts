@@ -2,13 +2,12 @@ import { Component } from '@angular/core';
 import { FormsModule} from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HighlightDirective } from '../highlight';
-import { CarForm } from '../car-form/car-form';
-import {MyHttpClient} from '../http-client/http-client';
+
 
 
 @Component({
   selector: 'app-hello-world',
-  imports: [FormsModule,CommonModule,CarForm,MyHttpClient],
+  imports: [FormsModule,CommonModule],
   templateUrl: './hello-world.html',
   styleUrl: './hello-world.css',
   standalone:true,

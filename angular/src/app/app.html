@@ -1,2 +1,8 @@
 <h1>Angular Default App component</h1>
-<app-hello-world></app-hello-world>
+<!-- render component -->
+ <ul>
+    <li routerLink="/">Basic</li>
+    <li [routerLink]="['forms']">Forms</li>
+    <li routerLink="/http">Http Client</li>
+ </ul>
+<router-outlet></router-outlet>

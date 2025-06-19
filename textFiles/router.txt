@@ -1,0 +1,14 @@
+-------------------- Angular Router -----------
+
+1. its used to route the component based on the url. index.html should have base tag as href="/"
+
+2. then import RouterModule and need to specify the 
+   router = [{path:'uri',component:Component}]
+
+3. Router-Outlet is important for render the route component. <router-outlet></router-outlet>
+
+4. routerLink='/path' || [routerLink]="['path']" we can link an element
+
+5. if we wan to pass the param to the router path --> path/:parmaName
+
+5. we can use router param by ValidatedRouter class setting an private obj then we access
